@@ -1,0 +1,7 @@
+version: 2
+
+build:
+  os: ubuntu-24.04
+  commands:
+    - mkdir -p $READTHEDOCS_OUTPUT/html/
+    - find . -maxdepth 1 -mindepth 1 ! -name ".git" ! -name ".readthedocs.yaml" -exec cp -r {} $READTHEDOCS_OUTPUT/html/ \;
